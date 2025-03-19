@@ -33,35 +33,13 @@
       color: #666;
     }
     
-    /* Two-column layout */
     .main-container {
-      display: flex;
-      flex-wrap: wrap;
       max-width: 1200px;
       margin: 20px auto;
       padding: 20px;
-    }
-    
-    /* Left column: Contact Form */
-    .main-content {
-      flex: 2;
-      padding: 20px;
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-right: 20px;
-      min-width: 300px;
-    }
-    
-    /* Right column: Sidebar */
-    .sidebar {
-      flex: 1;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      min-width: 250px;
-      margin-bottom: 20px;
     }
     
     /* Section Headings */
@@ -71,7 +49,51 @@
       margin-top: 30px;
     }
     
-    /* Contact Form */
+    /* Videos Section */
+    .videos {
+      margin-top: 20px;
+    }
+    
+    .video-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .video-item {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+    
+    .video-item img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+    
+    .video-item a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      display: block;
+      margin-top: 5px;
+    }
+    
+    /* Documents Section */
+    .documents {
+      margin-top: 30px;
+    }
+    
+    .documents a {
+      display: block;
+      margin-bottom: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    /* Contact Form Section */
     .contact-form {
       margin-top: 30px;
     }
@@ -111,65 +133,22 @@
       background-color: #555;
     }
     
-    /* Sidebar: Videos Section */
-    .videos {
-      margin-top: 20px;
-    }
-    
-    .video-item {
-      margin-bottom: 15px;
-    }
-    
-    .video-item img {
-      width: 100%;
-      border-radius: 4px;
-      display: block;
-    }
-    
-    .video-item a {
-      text-decoration: none;
-      color: #007bff;
-      font-weight: bold;
-      display: block;
-      margin-top: 5px;
-      text-align: center;
-    }
-    
-    /* Sidebar: Documents Section */
-    .documents {
-      margin-top: 30px;
-    }
-    
-    .documents a {
-      display: block;
-      margin-bottom: 10px;
-      color: #007bff;
-      text-decoration: none;
-    }
-    
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px 0;
       font-size: 0.9em;
       color: #777;
+      margin-top: 30px;
     }
     
     /* Responsive Adjustments */
     @media (max-width: 800px) {
-      .main-container {
+      .video-list {
         flex-direction: column;
       }
       
-      /* On mobile, display sidebar before main-content */
-      .sidebar {
-        order: 1;
-      }
-      
-      .main-content {
-        order: 2;
-        margin-right: 0;
-        margin-top: 20px;
+      .video-item {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -177,34 +156,14 @@
 <body>
   <header>
     <h1>Food is Ikar</h1>
-    <p>Plant-Based Eating Education for the Frum Community</p>
+    <p>Plant-Based Eating Education for the Kosher Consumer</p>
   </header>
   
   <div class="main-container">
-    <!-- Left Column: Contact Form -->
-    <div class="main-content">
-      <!-- Contact Form Section -->
-      <section id="contact" class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xgvaozbg" method="POST">
-          <label>
-            Your email:
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Your message:
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </div>
-    
-    <!-- Right Column: Sidebar -->
-    <div class="sidebar">
-      <!-- Videos Section -->
-      <section id="videos" class="videos">
-        <h2>Dr Mann's Recent Videos</h2>
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+      <h2>Dr Mann's Recent Videos</h2>
+      <div class="video-list">
         <div class="video-item">
           <a href="https://youtu.be/qik2isOOqi8" target="_blank">
             <img src="https://img.youtube.com/vi/qik2isOOqi8/hqdefault.jpg" alt="Video 1 of 3">
@@ -223,16 +182,36 @@
             Video 3 of 3
           </a>
         </div>
-      </section>
-      
-      <!-- Documents Section -->
-      <section id="documents" class="documents">
-        <h2>Meeting Notes</h2>
-        <a href="https://example.com/meeting1.pdf" target="_blank">Meeting 1 Notes</a>
-        <a href="https://example.com/meeting2.pdf" target="_blank">Meeting 2 Notes</a>
-        <a href="https://example.com/meeting3.pdf" target="_blank">Meeting 3 Notes</a>
-      </section>
-    </div>
+      </div>
+    </section>
+    
+    <!-- Documents Section -->
+    <section id="documents" class="documents">
+      <h2>Meeting Notes</h2>
+      <a href="https://example.com/meeting1.pdf" target="_blank">Meeting 1 Notes</a>
+      <a href="https://example.com/meeting2.pdf" target="_blank">Meeting 2 Notes</a>
+      <a href="https://example.com/meeting3.pdf" target="_blank">Meeting 3 Notes</a>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/xgvaozbg" method="POST">
+        <label>
+          Your name:
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Your email:
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Your message:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </section>
   </div>
   
   <footer>
