@@ -42,7 +42,7 @@
       padding: 20px;
     }
     
-    /* Left column: main content */
+    /* Left column: Contact Form */
     .main-content {
       flex: 2;
       padding: 20px;
@@ -53,7 +53,7 @@
       min-width: 300px;
     }
     
-    /* Right column: sidebar */
+    /* Right column: Sidebar */
     .sidebar {
       flex: 1;
       padding: 20px;
@@ -71,12 +71,6 @@
       margin-top: 30px;
     }
     
-    /* About Section */
-    #about p {
-      margin-top: 10px;
-      font-size: 1.1em;
-    }
-    
     /* Contact Form */
     .contact-form {
       margin-top: 30px;
@@ -86,6 +80,11 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+    }
+    
+    .contact-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
     
     .contact-form input, 
@@ -162,9 +161,15 @@
         flex-direction: column;
       }
       
+      /* On mobile, display sidebar before main-content */
+      .sidebar {
+        order: 1;
+      }
+      
       .main-content {
+        order: 2;
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
     }
   </style>
@@ -176,24 +181,21 @@
   </header>
   
   <div class="main-container">
-    <!-- Left Column: Main Content -->
+    <!-- Left Column: Contact Form -->
     <div class="main-content">
-      <section id="about">
-        <h2>About Us</h2>
-        <p>
-          Welcome to Food is Ikar, your resource for plant-based eating education, sustainable recipes, and wellness tips tailored for the frum community. We blend tradition with modern healthy living.
-        </p>
-      </section>
-      
       <!-- Contact Form Section -->
       <section id="contact" class="contact-form">
         <h2>Contact Us</h2>
-        <p>If you have any questions, suggestions, or feedback, please reach out using the form below:</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="_replyto" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
+        <form action="https://formspree.io/f/xgvaozbg" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send</button>
         </form>
       </section>
     </div>
