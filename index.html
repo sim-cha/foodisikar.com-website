@@ -1,30 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Food Is Ikar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food is Ikar - Plant-Based Eating Education</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      color: #666;
+    }
+    
+    /* Two-column layout */
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    
+    /* Left column: main content */
+    .main-content {
+      flex: 2;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-right: 20px;
+      min-width: 300px;
+    }
+    
+    /* Right column: sidebar */
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 250px;
+      margin-bottom: 20px;
+    }
+    
+    /* Section Headings */
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+      margin-top: 30px;
+    }
+    
+    /* About Section */
+    #about p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    
+    /* Contact Form */
+    .contact-form {
+      margin-top: 30px;
+    }
+    
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .contact-form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    
+    .contact-form button:hover {
+      background-color: #555;
+    }
+    
+    /* Sidebar: Videos Section */
+    .videos {
+      margin-top: 20px;
+    }
+    
+    .video-item {
+      margin-bottom: 15px;
+    }
+    
+    .video-item img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+    
+    .video-item a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      display: block;
+      margin-top: 5px;
+      text-align: center;
+    }
+    
+    /* Sidebar: Documents Section */
+    .documents {
+      margin-top: 30px;
+    }
+    
+    .documents a {
+      display: block;
+      margin-bottom: 10px;
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+      color: #777;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 800px) {
+      .main-container {
+        flex-direction: column;
+      }
+      
+      .main-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Food Is Ikar</h1>
-        <p>Your one-stop resource for food inspiration and ideas!</p>
+  <header>
+    <h1>Food is Ikar</h1>
+    <p>Plant-Based Eating Education for the Frum Community</p>
+  </header>
+  
+  <div class="main-container">
+    <!-- Left Column: Main Content -->
+    <div class="main-content">
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Food is Ikar, your resource for plant-based eating education, sustainable recipes, and wellness tips tailored for the frum community. We blend tradition with modern healthy living.
+        </p>
+      </section>
+      
+      <!-- Contact Form Section -->
+      <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, please reach out using the form below:</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
+    
+    <!-- Right Column: Sidebar -->
+    <div class="sidebar">
+      <!-- Videos Section -->
+      <section id="videos" class="videos">
+        <h2>Dr Mann's Recent Videos</h2>
+        <div class="video-item">
+          <a href="https://youtu.be/qik2isOOqi8" target="_blank">
+            <img src="https://img.youtube.com/vi/qik2isOOqi8/hqdefault.jpg" alt="Video 1 of 3">
+            Video 1 of 3
+          </a>
+        </div>
+        <div class="video-item">
+          <a href="https://youtu.be/vU10_ubgiCk" target="_blank">
+            <img src="https://img.youtube.com/vi/vU10_ubgiCk/hqdefault.jpg" alt="Video 2 of 3">
+            Video 2 of 3
+          </a>
+        </div>
+        <div class="video-item">
+          <a href="https://youtu.be/ENgkc9gMfYs" target="_blank">
+            <img src="https://img.youtube.com/vi/ENgkc9gMfYs/hqdefault.jpg" alt="Video 3 of 3">
+            Video 3 of 3
+          </a>
+        </div>
+      </section>
+      
+      <!-- Documents Section -->
+      <section id="documents" class="documents">
+        <h2>Meeting Notes</h2>
+        <a href="https://example.com/meeting1.pdf" target="_blank">Meeting 1 Notes</a>
+        <a href="https://example.com/meeting2.pdf" target="_blank">Meeting 2 Notes</a>
+        <a href="https://example.com/meeting3.pdf" target="_blank">Meeting 3 Notes</a>
+      </section>
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Food is Ikar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
